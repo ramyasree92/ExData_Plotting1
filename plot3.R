@@ -18,9 +18,9 @@ powerdata$datetime <- dmy_hms(powerdata$datetime)
 plot(powerdata$datetime, powerdata$Sub_metering_1, xlab = "", ylab = "Energy sub metering", type = "n", ylim = c(0, 30))
 
 ##Adding graph for each of Submetering Data
-lines(powerdata$datetime, powerdata$Sub_metering_1)
-lines(powerdata$datetime, powerdata$Sub_metering_2, col = "red")
-lines(powerdata$datetime, powerdata$Sub_metering_3, col = "blue")
+lines(powerdata$datetime, as.numeric(as.character(powerdata$Sub_metering_1)))
+lines(powerdata$datetime, as.numeric(as.character(powerdata$Sub_metering_2)), col = "red")
+lines(powerdata$datetime, as.numeric(as.character(powerdata$Sub_metering_3)), col = "blue")
 
 ##Adding legend to describe the data
 legend("topright", col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty = 1)
