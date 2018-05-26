@@ -15,7 +15,7 @@ powerdata$datetime <- paste(powerdata$Date, powerdata$Time)
 powerdata$datetime <- dmy_hms(powerdata$datetime)
 
 #Creates a blank plot with appropriate x and y axes ables and scale
-plot(powerdata$datetime, powerdata$Sub_metering_1, xlab = "", ylab = "Energy sub metering", type = "n", ylim = c(0, 30))
+plot(powerdata$datetime, as.numeric(as.character(powerdata$Sub_metering_1)), xlab = "", ylab = "Energy sub metering", type = "n", ylim = c(0, 30))
 
 ##Adding graph for each of Submetering Data
 lines(powerdata$datetime, as.numeric(as.character(powerdata$Sub_metering_1)))

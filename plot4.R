@@ -26,7 +26,7 @@ plot(powerdata$datetime, as.numeric(as.character(powerdata$Voltage)), type = "n"
 lines(powerdata$datetime, as.numeric(as.character(powerdata$Voltage)))
 
 #Plotting datetime against Sub_metering_1, Sub_metering_2, Sub_metering_3
-plot(powerdata$datetime, powerdata$Sub_metering_1, xlab = "", ylab = "Energy sub metering", type = "n", ylim = c(0, 30))
+plot(powerdata$datetime, as.numeric(as.character(powerdata$Sub_metering_1)), xlab = "", ylab = "Energy sub metering", type = "n", ylim = c(0, 30))
 lines(powerdata$datetime, as.numeric(as.character(powerdata$Sub_metering_1)))
 lines(powerdata$datetime, as.numeric(as.character(powerdata$Sub_metering_2)), col = "red")
 lines(powerdata$datetime, as.numeric(as.character(powerdata$Sub_metering_3)), col = "blue")
